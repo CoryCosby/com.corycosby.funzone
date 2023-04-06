@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>About Funzone</title>
+	<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous">
+	<style>
+		h1 {
+			font-size: 36px;
+			font-weight: bold;
+			color: #1e1e6c;
+		}
+		p,
+		li {
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#" th:href="@{/}">Home</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a th:href="@{/aboutus}">About Us</a></li>
+					<li><a th:href="@{/rockpaperscissors}">R.P.S. Game</a></li> 
+					<li sec:authorize="isAuthenticated()"><a th:href="@{/profile}">Profile</a></li>
+					 <li sec:authorize="isAuthenticated()"><a th:href="@{/user/myinfo}">My Info</a></li>
+					<li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		</br>
+		</br>
+		<h1 style="font-size: 48px; font-weight: bold; color: #1e1e6c;">About Funzone</h1>
+		<p style="font-size: 24px;">Funzone is a company that creates free web games to cure boredom. Our mission is to provide entertaining and challenging games to people of all ages, all around the world. We believe that games can help to reduce stress and improve mental agility, and we're committed to making sure our games are accessible to everyone.</p>
+		<h2>Testimonials</h2>
+		<ul>
+			<li style="font-size: 24px;">"I love playing Funzone's games - they're so addictive!" - Jane</li>
+			<li style="font-size: 24px;">"The games are challenging but fun, and they're a great way to pass the time." - Tom</li>
+			<li style="font-size: 24px;">"Funzone's games are the perfect cure for boredom. I can play for hours!" - Sarah</li>
+		</ul>
+	</div>
+</body>
+</html>
